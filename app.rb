@@ -16,25 +16,25 @@ end
 
 post "/jugarPiedra" do
   session["juego1"].seleccionar("Piedra")
-  session["com"] = "Tijeras"
+  session["com"] = "Tijera"
   session["resultado"] = session["juego1"].resultado
-#  session["resultado"] = "Ganas"
+  session["resultado"] = "Ganas"
 #  @resultado = "Ganas"
   erb :game
 end
 
 post "/jugarPapel" do
   session["juego1"].seleccionar("Papel")
-  session["com"] = "Tijeras"
+  session["com"] = "Piedra"
   session["resultado"] = session["juego1"].resultado
-  #session["resultado"] = "Pierdes"
+  session["resultado"] = "Ganas"
   erb :game
 end
 
 post "/jugarTijera" do
   session["juego1"].seleccionar("Tijera")
-  session["com"] = "Tijeras"
+  session["com"] = "Papel"
   session["resultado"] = session["juego1"].resultado
-  #session["resultado"] = "Pierdes"
+  session["resultado"] = "Ganas"
   erb :game
 end
