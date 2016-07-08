@@ -8,14 +8,15 @@ class Juego
   def initialize
     @seleccion = ""
     @sel_num = ""
+    @com = Random.new.rand(0..2).to_i
   end
 
-  def seleccionar objeto
+  def seleccionar objeto, maquina
     @seleccion = objeto
+    @com = maquina
   end
 
   def resultado
-    maquina = Random.new
 
     if @seleccion == "Papel"
       @sel_num = 0
@@ -26,12 +27,12 @@ class Juego
     end
 
 
-    if OBJETOS_MAQUINA[maquina.rand(0..2).to_i] == @seleccion
+    if OBJETOS_MAQUINA[@com] == @seleccion
       return "Empate"
-    elsif (maquina.rand(0..2).to_i == 0 && @sel_num == 2) || (maquina.rand(0..2).to_i == 2 && @sel_num == 0)
-
-
-
+    elsif (@com && @sel_num == 2)
+      return "Pierde"
+    else
+      return "Ganas"
     end
 
     #if OBJETOS_USUARIO[@seleccion] == maquina
