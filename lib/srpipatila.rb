@@ -1,6 +1,6 @@
 class Juego
 
-  OBJETOS = ["Papel" => 1 , "Piedra" => 2]
+  OBJETOS = ["Papel" , "Piedra" ]
 
   def initialize
     @seleccion = ""
