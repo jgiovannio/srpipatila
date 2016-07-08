@@ -29,10 +29,16 @@ class Juego
 
     if OBJETOS_MAQUINA[@com] == @seleccion
       return "Empate"
-    elsif (@com && @sel_num == 2)
+    elsif (@com == 0  && @sel_num == 2)
       return "Pierde"
-    else
+    elsif (@com == 2  && @sel_num == 0)
       return "Ganas"
+    elsif(@com > @sel_num)
+      return "Pierde"
+    elsif (@com < @sel_num)
+      return "Ganas"
+  #  else
+    #  return "Ganas	"
     end
 
     #if OBJETOS_USUARIO[@seleccion] == maquina
