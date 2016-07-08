@@ -15,8 +15,9 @@ post "/Start" do
 end
 
 post "/jugarPiedra" do
-  session["juego1"].seleccionar("Piedra")
   session["com"] = "Tijera"
+  session["juego1"].seleccionar("Piedra",1)
+
   session["resultado"] = session["juego1"].resultado
   session["resultado"] = "Ganas"
 #  @resultado = "Ganas"
@@ -24,16 +25,18 @@ post "/jugarPiedra" do
 end
 
 post "/jugarPapel" do
-  session["juego1"].seleccionar("Papel")
   session["com"] = "Piedra"
+  session["juego1"].seleccionar("Papel",2)
+
   session["resultado"] = session["juego1"].resultado
   session["resultado"] = "Ganas"
   erb :game
 end
 
 post "/jugarTijera" do
-  session["juego1"].seleccionar("Tijera")
   session["com"] = "Papel"
+  session["juego1"].seleccionar("Tijera",0)
+
   session["resultado"] = session["juego1"].resultado
   session["resultado"] = "Ganas"
   erb :game
