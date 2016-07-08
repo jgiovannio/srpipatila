@@ -8,6 +8,6 @@ class Juego
   end
 
   def resultado
-    "Ganas"
+      return "Ganas"
   end
 end
