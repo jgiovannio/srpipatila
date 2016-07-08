@@ -59,3 +59,7 @@ post "/jugarLagartija" do
   session["resultado"] = "Ganas"
   erb :game
 end
+
+post '/reiniciar' do
+  erb :index
+end

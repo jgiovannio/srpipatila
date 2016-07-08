@@ -37,11 +37,21 @@
 
     </table>
 
-
-        <h3 align="center">Tu eleccion: <%= session["eleccion"] %></h3>
-        <h3 align="center">Tu oponente eligio: <%= session["com"] %></h3>
-        <h1 align="center">Resultado: <%= session["resultado"] %></h1>
-
-
+    <table align="center">
+      <tr>
+        <td>
+          <h3>Tu eleccion: <%= session["eleccion"] %></h3>
+          <h3>Tu oponente eligio: <%= session["com"] %></h3>
+          <h1>Resultado: <%= session["resultado"] %></h1>
+          <tr>
+            <td align="center">
+              <form action="/reiniciar" method="post">
+                <input type="submit" name="/Start" value="Reiniciar">
+              </form>
+            </td>
+          </tr>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
