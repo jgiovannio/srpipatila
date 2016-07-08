@@ -5,20 +5,43 @@
     <title>Bienvenido</title>
   </head>
   <body>
-    <h1><%= session["name"] %> VS Sr Pipatila</h1>
-    <form action="/jugarPiedra" method="post">
-      <input type="submit" name="piedra" value="piedra">
-    </form>
+    <h1 align="center"><%= session["name"] %> VS Sr Pipatila</h1>
+    <table align="center" border="1">
+      <tr>
+        <td>
+          <form action="/jugarPiedra" method="post">
+            <input type="submit" name="piedra" value="piedra">
+          </form>
+        </td>
+        <td>
+          <form action="/jugarPapel" method="post">
+            <input type="submit" name="papel" value="papel">
+          </form>
+        </td>
+        <td>
+          <form action="/jugarTijera" method="post">
+            <input type="submit" name="tijera" value="tijera">
+          </form>
+        </td>
+        <td>
+          <form action="/jugarSr" method="post">
+            <input type="submit" name="sr" value="sr_spock">
+          </form>
+        </td>
+        <td>
+          <form action="/jugarLagartija" method="post">
+            <input type="submit" name="lagartija" value="lagartija">
+          </form>
+        </td>
+      </tr>
 
-    <form action="/jugarPapel" method="post">
-      <input type="submit" name="papel" value="papel">
-    </form>
+    </table>
 
-    <form action="/jugarTijera" method="post">
-      <input type="submit" name="tijera" value="tijera">
-    </form>
 
-    <h3>Tu oponente eligio <%= session["com"] %></h3>
-    <h3>Resultado: <%= session["resultado"] %></h3>
+        <h3 align="center">Tu eleccion: <%= session["eleccion"] %></h3>
+        <h3 align="center">Tu oponente eligio: <%= session["com"] %></h3>
+        <h1 align="center">Resultado: <%= session["resultado"] %></h1>
+
+
   </body>
 </html>
