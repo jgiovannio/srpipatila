@@ -14,4 +14,5 @@ describe Juego do
     jugador.resultado.should == "Empate"
   end
 
+
 end
