@@ -17,6 +17,7 @@ end
 Then(/^el "(.*?)" debe ser "(.*?)"$/) do |resultado, valor|
   fill_in(resultado, :with => valor)
 end
-Then(/^el resultado debe ser "(.*?)"$/) do |resultado|
-  pending # express the regexp above with the code you wish you had
+
+Then(/^el resultado debe ser "(.*?)"$/) do |valor|
+  last_response.body.should =~ /#{valor}/
 end

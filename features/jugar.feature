@@ -8,4 +8,4 @@ Scenario: el jugador debe elegir su jugada
     And introduzco en el campo "j1" el nombre de "Sebastian"
     And selecciono "Facil"
     And selecciono "piedra"
-    Then el "resultado" debe ser "Ganas"
+    Then el resultado debe ser "Ganas"

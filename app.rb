@@ -1,6 +1,9 @@
 require 'sinatra'
+require './lib/srpipatila.rb'
 
 enable :sessions
+
+
 
 get '/' do
  erb :index
