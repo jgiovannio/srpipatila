@@ -11,3 +11,13 @@ post "/Start" do
   session["dificultad"] = params["Facil"]
   erb :game
 end
+
+post "/jugarPiedra" do
+  session["resultado"] = "Ganas"
+  erb :game
+end
+
+post "/jugarPapel" do
+  session["resultado"] = "Pierdes"
+  erb :game
+end

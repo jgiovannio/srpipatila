@@ -6,6 +6,15 @@
   </head>
   <body>
     <h1><%= session["name"] %> VS Sr Pipatila</h1>
+    <form action="/jugarPiedra" method="post">
+      <input type="submit" name="piedra" value="piedra">
+    </form>
 
+
+    <form action="/jugarPapel" method="post">
+      <input type="submit" name="papel" value="papel">
+    </form>
+
+    <h3>Resultado: <%= session["resultado"] %></h3>
   </body>
 </html>
