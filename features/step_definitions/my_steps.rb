@@ -11,7 +11,7 @@ Given(/^introduzco en el campo "(.*?)" el nombre de "(.*?)"$/) do |campo, nombre
 end
 
 Given(/^selecciono "(.*?)"$/) do |boton|
-  click_button("#{boton}")
+  click_button(boton)
 end
 
 Then(/^el "(.*?)" debe ser "(.*?)"$/) do |resultado, valor|
@@ -22,9 +22,6 @@ Then(/^el resultado debe ser "(.*?)"$/) do |valor|
   last_response.body.should =~ /#{valor}/
 end
 
-Given(/^jugador selecciono "(.*?)"$/) do |arg1|
-  last_response.body.should =~ /#{arg1}/
-end
 
 Given(/^oponente selecciono "(.*?)"$/) do |arg1|
   last_response.body.should =~ /#{arg1}/
