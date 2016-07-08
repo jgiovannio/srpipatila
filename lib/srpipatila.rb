@@ -8,6 +8,6 @@ class Juego
   end
 
   def resultado
-    "Papel cubre Piedra"
+    "Ganas"
   end
 end
