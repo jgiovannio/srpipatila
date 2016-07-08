@@ -10,6 +10,6 @@ Given(/^introduzco en el campo "(.*?)" el nombre de "(.*?)"$/) do |campo, nombre
   fill_in(campo, :with => nombre)
 end
 
-Given(/^iniciar el juego$/) do
-  click_button("jugar")
+Given(/^selecciono "(.*?)"$/) do |boton|
+  click_button("Facil")
 end
