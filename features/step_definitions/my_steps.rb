@@ -21,3 +21,11 @@ end
 Then(/^el resultado debe ser "(.*?)"$/) do |valor|
   last_response.body.should =~ /#{valor}/
 end
+
+Given(/^jugador selecciono "(.*?)"$/) do |arg1|
+  last_response.body.should =~ /#{arg1}/
+end
+
+Given(/^oponente selecciono "(.*?)"$/) do |arg1|
+  last_response.body.should =~ /#{arg1}/
+end
